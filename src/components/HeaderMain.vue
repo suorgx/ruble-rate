@@ -22,8 +22,8 @@ function setFormatDate(value) {
 
 <template>
   <header>
-    <nav class="grid grid-flow-row sm:grid-flow-col gap-4 grid-cols-1 sm:grid-cols-2 mx-auto items-center justify-between py-8">
-      <div class="text-lg font-semibold">
+    <nav class="grid grid-flow-row sm:grid-flow-col gap-4 grid-cols-1 sm:grid-cols-2 mx-auto items-center justify-between py-6 sm:py-8">
+      <div class="text-lg font-medium">
         Курс рубля ЦБ РФ <span v-if="props.date">на {{ setFormatDate(props.date) }}</span>
       </div>
       <input
@@ -37,6 +37,3 @@ function setFormatDate(value) {
     </nav>
   </header>
 </template>
-
-<style scoped>
-</style>
