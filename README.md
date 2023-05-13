@@ -1,4 +1,4 @@
-# Курс рубля ЦБ РФ
+# Курс рубля ЦБ РФ - suorgx.github.io/demo/ruble-rate/
 
 ## О проекте:
 
