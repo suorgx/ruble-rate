@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { computed } from 'vue'
 import axios from 'axios'
 const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
 
@@ -10,9 +11,9 @@ export const useValutesStore = defineStore('valutesStore', {
         searchValue: ''
     }),
     getters: {
-        filteredValutes() {
-            const searchValue = this.searchValue.toLowerCase()
-            return Object.values(this.valutes).filter(valute =>
+        filteredValutes(state) {
+            const searchValue = state.searchValue.toLowerCase()
+            return Object.values(state.valutes).filter(valute =>
                 valute.Name.toLowerCase().includes(searchValue) || valute.CharCode.toLowerCase().includes(searchValue)
             )
         }
@@ -30,8 +31,6 @@ export const useValutesStore = defineStore('valutesStore', {
             })
             .finally(()=> {
                 this.isLoaded = true
-                console.log(typeof this.valutes)
-                console.log(this.valutes)
             })
         }
     }
