@@ -1,5 +1,4 @@
-# Курс рубля ЦБ РФ
-### [Demo](https://ruble-rate.vercel.app/)
+# [Курс рубля ЦБ РФ](https://ruble-rate.vercel.app/)
 
 ## О проекте:
 
