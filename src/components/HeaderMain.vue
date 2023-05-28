@@ -1,39 +1,25 @@
 <script setup>
-import {ref} from "vue";
-import moment from 'moment';
-
-const inputValue = ref('')
-
-const emit = defineEmits(['emitValue'])
+import moment from 'moment'
+import SwitchTheme from './SwitchTheme.vue'
+import InputSearch from './InputSearch.vue'
 
 const props = defineProps({
   date: String
 })
 
-function updateValue(value) {
-  emit('emitValue', value)
-}
-
 function setFormatDate(value) {
-  return moment(value).format("DD.MM.YYYY");
+  return moment(value).format('DD.MM.YYYY')
 }
-
 </script>
 
 <template>
   <header>
-    <nav class="grid grid-flow-row sm:grid-flow-col gap-4 grid-cols-1 sm:grid-cols-2 mx-auto items-center justify-between py-6 sm:py-8">
-      <div class="text-lg font-medium">
+    <nav class="relative mx-auto grid grid-flow-row grid-cols-1 items-center justify-between gap-4 py-6 sm:grid-flow-col sm:grid-cols-2 sm:py-8">
+      <div class="w-3/4 text-lg font-medium">
         Курс рубля ЦБ РФ <span v-if="props.date">на {{ setFormatDate(props.date) }}</span>
       </div>
-      <input
-        type="search"
-        id="default-search"
-        class="flex w-full lg:w-96 ml-auto p-3 text-sm text-gray-900 border border-gray-300 rounded-md bg-white outline-0"
-        placeholder="Поиск"
-        v-model="inputValue"
-        @input="updateValue(inputValue)"
-      >
+      <input-search></input-search>
+      <switch-theme></switch-theme>
     </nav>
   </header>
 </template>

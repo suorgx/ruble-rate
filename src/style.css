@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 body {
-  background-color: rgba(37, 99, 235, 0.9);
-  min-height: 100vh;
+  @apply min-h-screen bg-neutral-200 dark:bg-blue-900;
 }
 
 * {
   font-family: 'Fira Code', monospace;
+}
+
+#app {
+  @apply container mx-auto px-3 sm:px-8 text-black dark:text-white;
 }

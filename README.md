@@ -1,5 +1,5 @@
 # Курс рубля ЦБ РФ
-### [suorgx.github.io/demo/ruble-rate/](https://suorgx.github.io/demo/ruble-rate/)
+### [Demo](https://ruble-rate.vercel.app/)
 
 ## О проекте:
 
@@ -13,6 +13,7 @@
 - Tailwind
 - Axios
 - Moment
+- Pinia
 
 ## Установка:
 
