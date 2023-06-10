@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="relative grid gap-1 overflow-hidden rounded-md bg-white p-6 shadow hover:bg-gray-100">
+  <div class="relative grid gap-1 overflow-hidden rounded-md bg-white p-6 hover:bg-gray-100">
     <div class="text-xl tracking-tight text-gray-900">
       {{ nominal }} {{ name }}
     </div>
