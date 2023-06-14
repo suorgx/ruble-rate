@@ -16,7 +16,7 @@ defineProps({
     </div>
     <div class="flex justify-between gap-1 text-2xl font-medium text-gray-900">
       <span>{{value.toFixed(2)}} &#8381;</span>
-      <span :class="Number(value) > Number(previous) ? 'text-emerald-500' : 'text-red-500'">
+      <span :class="Number(value) < Number(previous) ? 'text-emerald-500' : 'text-red-500'">
         {{ Number(value) > Number(previous) ? '+' : null }}{{ (Number(value) - Number(previous)).toFixed(2) }}
       </span>
     </div>
